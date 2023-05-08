@@ -1,0 +1,611 @@
+﻿<Window x:Class="De_Fluitende_Fietser_Project_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De_Fluitende_Fietser_Project_1"
+        mc:Ignorable="d"
+        Title="Fietsverhuur De Fluitende Fietser – Facturering" Height="450" Width="800">
+    <Grid Background="BlueViolet">
+
+        <!-- Grid voor de 3 buttons, bestellen, afrekenen en Nieuwekant + logo -->
+        <Grid
+            x:Name="ButtonLogo"
+            Grid.Column="0" 
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            >
+
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="15*" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="15*" />
+                    <RowDefinition Height="15*" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="15*" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+
+
+            <!-- de bestel button -->
+            <Viewbox
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                Grid.Row="1"
+                >
+                <Button
+                    x:Name="BestelButton"
+                    Width="100"
+                    FontSize="7"
+                    Click="BestelButton_Click"
+                    >
+                    Bestellen
+                </Button>
+            </Viewbox>
+            <!-- ================= -->
+
+            <!-- Het logo van de fluitendefietser, ik heb een rectangle gekozen omdat dit beter is, referentie naar stopthebutton -->
+            <Rectangle
+                Grid.Column="2"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                >
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/images/fietser-nb.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <!-- ================================================================================================================ -->
+
+            <!-- de afreken button -->
+            <Viewbox
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Grid.Row="6"
+                >
+                <Button
+                    x:Name="AfrekenButton"
+                    Width="50"
+                    FontSize="7"
+                    Click="AfrekenButton_Click"
+                    >
+                    Afrekenen
+                </Button>
+            </Viewbox>
+            <!-- ================= -->
+
+            <!-- de nieuweklant button -->
+            <Viewbox
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
+                Grid.Row="6"
+                >
+                <Button
+                    x:Name="NieuweKlantButton"
+                    Width="50"
+                    FontSize="7"
+                    Click="NieuwKlantButton_Click"
+                    >
+                    Nieuwe klant
+                </Button>
+            </Viewbox>
+            <!-- ================= -->
+
+        </Grid>
+        <!-- ===================================================================== -->
+        
+
+        <!-- Grid voor alle Labels en Comboxes -->
+        <Grid
+            x:Name="LabelsComboboxes"
+            Grid.Column="0" 
+            Grid.Row="0"
+            >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+
+            
+            
+            <Viewbox 
+                Grid.Column="1" 
+                Grid.Row="1"
+                >
+                <Label 
+                    Background="LightBlue"
+                    Width="100"
+                    Content="Fietsen:"
+                />
+            </Viewbox>
+            <!-- FietsenKiezen  -->
+            <Viewbox                
+                Grid.Column="3"
+                Grid.Row="1"
+                >
+                <ComboBox
+                    SelectionChanged="Fietsen_SelectionChanged"
+                    Name="Fietsen"
+                    Width="120"
+                    >
+                    <ComboBoxItem 
+                        Name="aanhangfietsItem"          
+                        Content="Aanhangfiets € 20,00"
+                        />
+                    <ComboBoxItem 
+                        Name="bakfietsItem" 
+                        Content="Bakfiets € 35,00"
+                        />
+                    <ComboBoxItem 
+                        Name="driewielfietsItem" 
+                        Content="Driewielfiets € 30,00"
+                        />
+                    <ComboBoxItem 
+                        Name="elektrischeFietsItem" 
+                        Content="Elektrische fiets € 30,00"
+                        />
+                    <ComboBoxItem 
+                        Name="kinderfietsItem" 
+                        Content="Kinderfiets € 15,00"
+                        />
+                    <ComboBoxItem 
+                        Name="ligfietsItem" Content="Ligfiets € 45,00"
+                        />
+                    <ComboBoxItem 
+                        Name="omaFietsItem" 
+                        Content="Oma fiets € 12,50"
+                        />
+                    <ComboBoxItem 
+                        Name="racefietsItem" 
+                        Content="Racefiets € 15,00"
+                        />
+                    <ComboBoxItem 
+                        Name="speedPedelecItem" 
+                        Content="Speed pedelec € 15,00" 
+                        />
+                    <ComboBoxItem 
+                        Name="stadsfietsItem" 
+                        Content="Stadsfiets € 12,50"
+                        />
+                    <ComboBoxItem 
+                        Name="vouwfietsItem" 
+                        Content="Vouwfiets € 10,00"
+                        />
+                    <ComboBoxItem
+                        Name="zitfietsItem" 
+                        Content="Zitfiets € 15,00"
+                        />
+                </ComboBox>
+            </Viewbox>
+
+            <!-- ============ -->
+
+            <!-- Verzekeringen  -->
+            <Viewbox                
+                Grid.Column="3"
+                Grid.Row="2"
+                >
+                <ComboBox
+                    SelectionChanged="Verzekeringen_SelectionChanged"
+                    Name="Verzekeringen"
+                    Width="120"
+                    >
+                    <ComboBoxItem 
+                        Name="beschadigingenItem"          
+                        Content="Beschadigingen € 5,00"
+                        />
+                    <ComboBoxItem 
+                        Name="diefstalItem" 
+                        Content="Diefstal € 10,00"
+                        />
+                    <ComboBoxItem 
+                        Name="rechtsbijstandItem" 
+                        Content="Rechtsbijstand € 5,00"
+                        />
+                    <ComboBoxItem 
+                        Name="ongevallenItem" 
+                        Content="Ongevallen € 2,50"
+                        />
+                </ComboBox>
+
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Column="1" 
+                Grid.Row="2"
+                >
+                <Label 
+                    Background="Aquamarine"
+                    Content="Verzekeringen:"
+                    Width="100"
+                />
+            </Viewbox>
+            <!-- ============ -->
+
+            <!-- Services  -->
+            <Viewbox                
+                Grid.Column="3"
+                Grid.Row="3"
+                >
+                <ComboBox
+                    SelectionChanged="Services_SelectionChanged"
+                    Name="Services"
+                    Width="120"
+                    >
+                    <ComboBoxItem 
+                    Name="ophaalserviceItem"          
+                    Content="Ophaalservice € 15,00"
+                    />
+                <ComboBoxItem 
+                    Name="regenpakItem" 
+                    Content="Regenpak € 10,00"
+                    />
+                <ComboBoxItem 
+                    Name="lunchpakketBasisItem" 
+                    Content="Lunchpakket basis € 12,50"
+                    />
+                <ComboBoxItem 
+                    Name="lunchpakketUitgebreidItem" 
+                    Content="Lunchpakket uitgebreid € 20,00"
+                    />
+                </ComboBox>
+
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Column="1" 
+                Grid.Row="3"
+                >
+                <Label
+                    Background="Orchid"
+                    Width="100"
+                    Content="Services:"
+                />
+            </Viewbox>
+            <!-- ============ -->
+
+            <!-- aantaldagen  -->
+            <Viewbox                
+                Grid.Column="3"
+                Grid.Row="4"
+                >
+                <TextBox
+                    TextChanged="AantalDagen_TextChanged"
+                    x:Name="AantalDagen"
+                    Width="200"
+                    Height="50"
+                    FontSize="20"
+                    TextAlignment="Center"
+                    Text="1"
+                    />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Column="1" 
+                Grid.Row="4"
+                >
+                <Label 
+                    Content="Aantaldagen:"
+                />
+            </Viewbox>
+            <!-- ============ -->
+        </Grid>
+        <!-- =============================================== -->
+
+        <!-- BestellingGrid is de Grid voor de het bestellen -->
+        <Grid
+            x:Name="BestellingGrid"
+            Background="White"
+            Grid.Column="1" 
+            Grid.ColumnSpan="3" 
+            Grid.RowSpan="3"
+            >
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+
+
+
+            <Viewbox
+                
+                Margin="10"
+                Grid.Column="2"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                >
+                <ListBox
+                    MouseDoubleClick="BestelLijst_MouseDoubleClick"
+                    x:Name="BestelLijst"
+                    BorderBrush="BlueViolet"
+                    BorderThickness="2"
+                    Height="505"
+                    Width="285"
+                    
+                    >
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="BorderBrush" Value="BlueViolet" />
+                            <Setter Property="BorderThickness" Value="2" />
+                            <Setter Property="Margin" Value="1" />
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+
+            </Viewbox>
+
+
+
+            <Border
+                Grid.Column="0"
+                Grid.Row="1"
+                BorderBrush="BlueViolet" 
+                BorderThickness="2"
+                >
+                <Grid
+                >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="15*" />
+                        <ColumnDefinition Width="60*" />
+                        <ColumnDefinition Width="15*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+
+                    <Viewbox
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        >
+                        <Label
+                            FontSize="7"
+                            BorderBrush="BlueViolet"
+                            BorderThickness="1"
+                            Content="Te betalen bedrag"
+                            />
+                    </Viewbox>
+
+                    <Viewbox
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        >
+                        <TextBox
+                            BorderBrush="BlueViolet"
+                            BorderThickness="3"
+                            Name="TotalCostBox"
+                            Width="200"
+                            Height="50"
+                            FontSize="20"
+                            TextAlignment="Center"
+                            >
+                            € 00,00
+                        </TextBox>
+
+
+                    </Viewbox>
+                    
+                    
+                    
+                </Grid>
+            </Border>
+
+            <Border 
+                Grid.Column="0"
+                Grid.Row="0"
+                BorderBrush="BlueViolet" 
+                BorderThickness="2"
+                >
+                <Grid
+                x:Name="EuroDisplay"
+                >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="14*" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <Viewbox
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    >
+                        <TextBlock
+                        FontSize="8"
+                        x:Name="EuroDPFietsen"
+                        Background="LightBlue"
+                        Width="80"
+                        Height="15"
+                        >
+                        € 00,00 Per dag
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    >
+                        <TextBlock
+                        FontWeight="Thin"
+                        FontSize="10"
+                        x:Name="EuroDPFietsenName"
+                        Background="LightBlue"
+                        Width="100"
+                        Height="15"
+                        >
+                        
+                        </TextBlock>
+                    </Viewbox>
+                    
+                    
+
+                    <Viewbox
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    >
+                        <TextBlock
+                        FontSize="8"
+                        Name="EuroDPVerzekeringen"
+                        Background="Aquamarine"
+                        Width="80"
+                        Height="15"
+                        >
+                        € 00,00 Per dag
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox
+                    Grid.Column="3"
+                    Grid.Row="2"
+                    >
+                        <TextBlock
+                        FontWeight="Thin"
+                        FontSize="10"
+                        Name="EuroDPVerzekeringenName"
+                        Background="Aquamarine"
+                        Width="100"
+                        Height="15"
+                        >
+                        
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    >
+                        <TextBlock
+                        FontSize="8"
+                        Name="EuroDPServices"
+                        Background="Orchid"
+                        Width="80"
+                        Height="15"
+                        >
+                        € 00,00 Per dag
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox
+                    Grid.Column="3"
+                    Grid.Row="3"
+                    >
+                        <TextBlock
+                        FontWeight="Thin"
+                        FontSize="10"
+                        Name="EuroDPServicesName"
+                        Background="Orchid"
+                        Width="100"
+                        Height="15"
+                        >
+                        
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox
+                    Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    Grid.Row="5"
+                    >
+                        <TextBlock
+                        TextAlignment="Center"
+                        FontWeight="Thin"
+                        FontSize="10"
+                        Name="EuroDPAantalDagen"
+                        Background="BlueViolet"
+                        Width="100"
+                        Height="15"
+                        >
+                        1 Dag
+                        </TextBlock>
+                    </Viewbox>
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+        <!-- =============================================== -->
+
+
+        <!-- ProgressBar_StackPanel is de stack panel waar de ProgressBar in zit, deze zorgt voor dat hij netjes met een margin in de Hoofd grid zit -->
+        <StackPanel
+            x:Name="ProgressBar_StackPanel"
+            Grid.Row="3"
+            Grid.ColumnSpan="4"
+            >
+            <!-- ProgressBar voor het sluiten van de applicatie (duurt 60s) -->
+            <ProgressBar 
+                    x:Name="ProgressBar"
+                    Minimum="0" 
+                    Maximum="60"
+                    Height="30"
+                    Margin="10"
+                    Foreground="HotPink"
+                    Background="Turquoise"
+                />
+        </StackPanel>
+
+
+        <!-- de Hoofd grid voor alle grids en wat er nog gaat komen -->
+        <Grid.ColumnDefinitions>
+            <!-- RowRowDefinition voor de Width van de Progressbar -->
+            <ColumnDefinition Width="20*" />
+            <!-- ==================================== -->
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <!-- RowRowDefinition voor de ProgressBar -->
+            <RowDefinition Height="10*" /> 
+        </Grid.RowDefinitions>
+
+    </Grid>
+    <!-- ========================================================== -->
+</Window>

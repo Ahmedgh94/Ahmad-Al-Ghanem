@@ -1,0 +1,40 @@
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.exe.config
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.exe
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.pdb
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.AssemblyReference.cache
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.SuggestedBindingRedirects.cache
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\MainWindow.g.cs
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\App.g.cs
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_MarkupCompile.cache
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_MarkupCompile.lref
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\MainWindow.baml
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.g.resources
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De_Fluitende_Fietser_Project_1.Properties.Resources.resources
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.GenerateResource.cache
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.CoreCompileInputs.cache
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.exe
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.pdb
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\fietser-nb.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_Content.g.cs
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\fietser-nb.png
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.exe.config
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.exe
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\De Fluitende Fietser Project 1.pdb
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.AssemblyReference.cache
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\MainWindow.g.cs
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\App.g.cs
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_Content.g.cs
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_MarkupCompile.cache
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1_MarkupCompile.lref
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\MainWindow.baml
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.g.resources
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De_Fluitende_Fietser_Project_1.Properties.Resources.resources
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.GenerateResource.cache
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.csproj.CoreCompileInputs.cache
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.exe
+C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.pdb
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\KassaSysteem.g.cs
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\RekenMachine.g.cs
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\KassaSysteem.baml
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\RekenMachine.baml
