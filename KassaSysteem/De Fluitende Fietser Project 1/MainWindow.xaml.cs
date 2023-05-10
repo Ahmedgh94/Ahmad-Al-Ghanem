@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -10,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -42,7 +45,9 @@ namespace De_Fluitende_Fietser_Project_1
             BestelButton.Click += ResetTimer;
             NieuweKlantButton.Click += ResetTimer;
             AfrekenButton.Click += ResetTimer;
+
         }
+
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -218,7 +223,7 @@ namespace De_Fluitende_Fietser_Project_1
 
                 totalCost /= 100;
 
-                TotalCostBox.Text = $"€ {totalCost.ToString("0.00", System.Globalization.CultureInfo.GetCultureInfo("nl-NL"))}";
+                TotalCostBox.Text = $"€ {totalCost.ToString("0.00", CultureInfo.GetCultureInfo("nl-NL"))}";
             }
         }
 
@@ -270,32 +275,45 @@ namespace De_Fluitende_Fietser_Project_1
 
         private void AfrekenButton_Click(object sender, RoutedEventArgs e)
         {
+            KassaSysteem KassaSysteemWindow = new KassaSysteem(this.TotalCostBox.Text, BestelLijst.Items.Cast<string>().ToList());
+            KassaSysteemWindow.Closed += KassaSysteemWindow_Closed;
+            this.IsEnabled = false; // disable MainWindow interaction
+            KassaSysteemWindow.Show();
 
+            if (KassaSysteemWindow != null && KassaSysteemWindow.IsVisible)//
+            {
+                timer.Tick -= Timer_Tick;//Hier heb ik timer.Tick en de Timer_Tick, met de -= haal ik de Timer_Tick weg van timer.Tick. dit zorgt er voor dat de timer wordt gestopt
+            }
         }
 
+        private void KassaSysteemWindow_Closed(object sender, EventArgs e)//de private void functie voor KassaSysteemWindow_Closed, dit wordt uitgevoerd als je de KassaSysteem sluit
+        {
+            this.IsEnabled = true; // this, is een ander word voor MainWindow. Dit betekend dus dat de MainWindow weer wordt aangezet
+            timer.Tick += Timer_Tick;//Hier heb ik timer.Tick en de Timer_Tick, met de += voeg ik de Timer_Tick weer terug aan timer.Tick
+        }
         private void ResetAll()//Dit is de functie for het ressten van alles. Dit zorgt er voor dat alle boxes terug gezet worden naar het Origineel!
         {
-            Verzekeringen.SelectedIndex = -1;
-            Fietsen.SelectedIndex = -1;
-            Services.SelectedIndex = -1;
+            Verzekeringen.SelectedIndex = -1; // -1 zorgt er voor dat de Combox wordt gereset
+            Fietsen.SelectedIndex = -1 // -1 zorgt er voor dat de Combox wordt gereset
+            Services.SelectedIndex = -1; // -1 zorgt er voor dat de Combox wordt gereset
 
-            AantalDagen.Text = "";
-            EuroDPAantalDagen.Text = "";
-            EuroDPVerzekeringenName.Text = "";
-            EuroDPVerzekeringen.Text = "€ 00,00 Per dag";
-            EuroDPFietsenName.Text = "";
+            AantalDagen.Text = "";//TextBox wordt hier terugezet
+            EuroDPAantalDagen.Text = "";//TextBox wordt hier terugezet
+            EuroDPVerzekeringenName.Text = "";//TextBox wordt hier terugezet
+            EuroDPVerzekeringen.Text = "€ 00,00 Per dag";//TextBox wordt hier terugezet
+            EuroDPFietsenName.Text = "";//TextBox wordt hier terugezet
             EuroDPFietsen.Text = "€ 00,00 Per dag";
-            EuroDPServicesName.Text = "";
-            EuroDPServices.Text = "€ 00,00 Per dag";
+            EuroDPServicesName.Text = "";//TextBox wordt hier terugezet
+            EuroDPServices.Text = "€ 00,00 Per dag"; //De EuroDPServcies TextBox wordt hier terugezet
 
-            TotalCostBox.Text = "€ 00,00";
-            AantalDagen.Text = "1";
+            TotalCostBox.Text = "€ 00,00";// de TotalCostBox wordt terug gezet naar "€ 00,00"
+            AantalDagen.Text = "1"; //Het aantal dagen worden hier terug gezet naar 1
 
-            BestelLijst.Items.Clear();
+            BestelLijst.Items.Clear();// De ListBoxItems van de ListBox BestelLijst worden hier verwijderd
 
-            ProgressBar.Value = 0;
-            timer.Stop();
-            timer.Start();
+            ProgressBar.Value = 0; // ProgressBar
+            timer.Stop();// de timer stopt hier
+            timer.Start();// de timer start hier weer
         }
 
         private void NieuwKlantButton_Click(object sender, RoutedEventArgs e) //de eventhandler van NieuwKlantButton, de functie hier onder wordt uitgevoerd als je er op klikt

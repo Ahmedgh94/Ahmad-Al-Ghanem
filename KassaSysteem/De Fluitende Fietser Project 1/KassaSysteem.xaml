@@ -5,87 +5,473 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De_Fluitende_Fietser_Project_1"
         mc:Ignorable="d"
-        Title="KassaSysteem" Height="450" Width="450">
+        Title="KassaSysteem" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />
-            <RowDefinition Height="290" />
+            <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
 
-        <Grid
-            x:Name="KassaLogoGird"
-           Grid.Column="0"
-            Grid.Row="0"
-            >
-            
-        </Grid>
+        
+        <Rectangle
+                Grid.Column="0"
+                Grid.Row="0"
+                >
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/images/fietser-nb.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
-        <Grid
+        <Border
             Grid.Column="1"
             Grid.Row="0"
-            x:Name="KassaBestelLijst"
-            >
+             BorderBrush="BlueViolet" 
+             BorderThickness="2"
+             >
+                <Grid
+                     x:Name="KassaBestelLijst"
+                     >
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="2*" />
+                  <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                    
+                <Viewbox
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        >
+                    <Label
+                            FontSize="50"
+                            BorderBrush="BlueViolet"
+                            Content="Bestellingen"
+                            HorizontalContentAlignment="Center"
+                            />
+                </Viewbox>
 
-        </Grid>
+                <Viewbox
+                        Margin="10"
+                        Grid.Column="3"
+                        Grid.Row="3"
+                        Grid.RowSpan="2"
+                        >
+                <ListBox
 
-        <Grid
-            Grid.Column="1"
-            Grid.Row="1"
+                        x:Name="BestelLijst_KassaSysteem"
+                        BorderBrush="BlueViolet"
+                        BorderThickness="5"
+                        Height="100"
+                        Width="330"
+                        >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="BorderBrush" Value="BlueViolet" />
+                                <Setter Property="BorderThickness" Value="2" />
+                                <Setter Property="Margin" Value="1" />
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+
+                </Viewbox>
+
+
+            </Grid>
+        </Border>
+
+        <Border
+             Grid.Column="1"
+             Grid.Row="1"
+             BorderBrush="BlueViolet" 
+             BorderThickness="2"
+             >
+            <Grid
             x:Name="KassaMunten"
             >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="10*" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle
+                        x:Name="VijfCent"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        MouseDown="VijfCent_MouseDown"
+                        
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/0.5.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="TienCent"
+                        Grid.Column="4"
+                        Grid.Row="0"
+                        MouseDown="TienCent_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/0.10.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+
+                <Rectangle
+                        x:Name="TwintigCent"
+                        Grid.Column="6"
+                        Grid.Row="0"
+                        MouseDown="TwintigCent_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/0.20.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="VijftigCent"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        MouseDown="VijftigCent_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/0.50.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                
+                <Rectangle
+                        x:Name="EenEuro"
+                        Grid.Column="4"
+                        Grid.Row="2"
+                        MouseDown="EenEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/1.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+
+                <Rectangle
+                          x:Name="TweeEuro"
+                          Grid.Column="6"
+                          Grid.Row="2"
+                          MouseDown="TweeEuro_MouseDown"
+                          >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/2.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                
+                     <Rectangle
+                               x:Name="VijfEuro"
+                               Grid.Column="2"
+                               Grid.Row="4"
+                               MouseDown="VijfEuro_MouseDown"
+                               >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/5.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+
+                <Rectangle
+                        x:Name="TienEuro"
+                        Grid.Column="4"
+                        Grid.Row="4"
+                        MouseDown="TienEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/10.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="TwintigEuro"
+                        Grid.Column="6"
+                        Grid.Row="4"
+                        MouseDown="TwintigEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/20.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="VijtigEuro"
+                        Grid.Column="2"
+                        Grid.Row="6"
+                        MouseDown="VijftigEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/50.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="HonderdEuro"
+                        Grid.Column="4"
+                        Grid.Row="6"
+                        MouseDown="HonderdEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/100.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+
+                <Rectangle
+                        x:Name="TweehonderdEuro"
+                        Grid.Column="6"
+                        Grid.Row="6"
+                        MouseDown="TweehonderdEuro_MouseDown"
+                        >
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/images/200.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                
+                
 
 
 
+            </Grid>
+        </Border>
 
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
-            </Grid.ColumnDefinitions>
-
-        </Grid>
-
-        <Grid
-            Grid.Column="0"
-            Grid.Row="1"
-            x:Name="KassaLijst"
+        <Border
+                Grid.Column="0"
+                Grid.Row="1"
+                BorderBrush="BlueViolet" 
+                BorderThickness="2"
+                >
+            <Grid
+                  Grid.Column="0"
+                  Grid.Row="1"
+                  x:Name="KassaLijst"
+                  Background="BlueViolet"
             >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5" />
-                <RowDefinition Height="5*" />
-                <RowDefinition Height="5" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5" />
 
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5" />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="5" />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="5" />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="5" />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="5" />
-            </Grid.ColumnDefinitions>
-        </Grid>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="5" />
+                </Grid.ColumnDefinitions>
+
+
+
+
+                <Viewbox
+                        Margin="10"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="10"
+                        Grid.Row="3"
+                        Grid.RowSpan="4"
+                        >
+                    <ListBox
+
+                        x:Name="MuntenLijst"
+                        BorderBrush="BlueViolet"
+                        BorderThickness="5"
+                        Height="100"
+                        Width="330"
+                        >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="BorderBrush" Value="BlueViolet" />
+                                <Setter Property="BorderThickness" Value="2" />
+                                <Setter Property="Margin" Value="1" />
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+
+                </Viewbox>
+
+
+
+
+
+                <Viewbox
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        >
+                    <Label
+                            FontSize="7"
+                            BorderBrush="BlueViolet"
+                            BorderThickness="1"
+                            Content="Te betalen bedrag"
+                            Background="White"
+                            />
+                </Viewbox>
+
+                <Viewbox
+                        Grid.Column="5"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        >
+                    <Label
+                            FontSize="7"
+                            BorderBrush="BlueViolet"
+                            BorderThickness="1"
+                            Content="Terug Wissel geld"
+                            Background="White"
+                            />
+                </Viewbox>
+
+
+                <Viewbox
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        >
+                    <TextBox
+                            BorderBrush="BlueViolet"
+                            BorderThickness="3"
+                            Name="TotalCostBox_KassaSysteem"
+                            Width="200"
+                            Height="50"
+                            FontSize="20"
+                            TextAlignment="Center"
+                            >
+                        € 00,00
+                    </TextBox>
+
+                </Viewbox>
+
+                <Viewbox
+                        Grid.Column="5"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        >
+                    <TextBox
+                            BorderBrush="BlueViolet"
+                            BorderThickness="3"
+                            Name="MoneyBack"
+                            Width="200"
+                            Height="50"
+                            FontSize="20"
+                            TextAlignment="Center"
+                            >
+                        +€ 00,00
+                    </TextBox>
+
+                </Viewbox>
+
+
+                <Viewbox
+                        Grid.Row="9"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        >
+                    <Button
+                        x:Name="CouponCodeApply"
+                        Click="CouponCodeApply_Click"
+                        Width="50"
+                        FontSize="7"
+                        >
+                        Apply Coupon
+                    </Button>
+                    
+                </Viewbox>
+
+                <Viewbox
+                        Grid.Row="9"
+                        Grid.Column="5"
+                        Grid.ColumnSpan="3"
+                        >
+                    <Button                                     
+                            x:Name="KassaPay"
+                            Width="50"
+                            FontSize="7"
+                            Click="KassaPay_Click"
+                            >
+                        Betalen
+                    </Button>
+
+                </Viewbox>
+
+
+                <Viewbox
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        Grid.ColumnSpan="3"
+                        >
+                    <Label
+                            FontSize="10"
+                            BorderBrush="BlueViolet"
+                            BorderThickness="1"
+                            Content="Coupon:"
+                            Width="100"
+                            HorizontalContentAlignment="Right"
+                            />
+                </Viewbox>
+
+
+                <Viewbox
+                        Grid.Column="5"
+                        Grid.Row="7"
+                        Grid.ColumnSpan="3"
+                        >
+                    <TextBox
+                            BorderBrush="BlueViolet"
+                            BorderThickness="3"
+                            Name="CouponCode"
+                            Width="200"
+                            Height="40"
+                            FontSize="20"
+                            TextAlignment="Center"
+                            FontStyle="Italic"
+                            GotFocus="CouponCode_GotFocus"
+                            LostFocus="CouponCode_LostFocus"
+                            >
+                            code here
+                    </TextBox>
+
+                </Viewbox>
+
+
+            </Grid>
+        </Border>
 
     </Grid>
 </Window>

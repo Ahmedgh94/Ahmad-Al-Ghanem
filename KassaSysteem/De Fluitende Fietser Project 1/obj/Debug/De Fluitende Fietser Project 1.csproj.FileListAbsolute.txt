@@ -35,6 +35,16 @@ C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De 
 C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.exe
 C:\Users\mrluu\Documents\GitHub\project_1\WPF\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\De Fluitende Fietser Project 1.pdb
 C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\KassaSysteem.g.cs
-C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\RekenMachine.g.cs
 C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\KassaSysteem.baml
-C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\obj\Debug\RekenMachine.baml
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\0.10.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\0.20.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\0.5.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\0.50.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\1.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\10.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\100.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\2.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\20.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\200.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\5.png
+C:\ICT\Progameren\Project 1\De Fluitende Fietser Project 1\De Fluitende Fietser Project 1\bin\Debug\images\50.png

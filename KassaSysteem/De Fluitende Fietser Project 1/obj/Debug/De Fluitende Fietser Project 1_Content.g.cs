@@ -8,6 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/0.10.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/0.20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/0.5.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/0.50.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/10.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/200.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/5.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/50.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/fietser-nb.png")]
 
 
